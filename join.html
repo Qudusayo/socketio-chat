@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="logo.png">
+
+    <title>Whale Login</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="signin.css" rel="stylesheet">
+</head>
+
+<body class="text-center">
+    <nav class="navbar navbar-expand navbar-light bg-light" style="width: 100%;">
+        <a class="navbar-brand" href="#" id="header"><img class="mb-6" src="logo.png"
+                style="transform: rotateY(180deg);" alt="" width="30" height="30"></a>
+
+        <div class="collapse navbar-collapse" id="navbarsExample02">
+            <ul class="navbar-nav mr-auto">
+            </ul>
+
+        </div>
+    </nav>
+    <form class="form-signin" method="POST" action="/">
+        <img class="mb-6" src="logo.png" style="transform: rotateY(180deg);" alt="" width="160" height="160">
+        <label for="Username" class="sr-only">Username</label>
+        <input name="username" type="text" id="inputEmail" class="form-control mb-2" placeholder="Username" required autofocus>
+        <button class="btn btn-lg btn-primary btn-block" type="submit">Join</button>
+        <br>
+        <p class="mt-5 mb-3 text-muted">&copy; 2019-2020</p>
+    </form>
+
+    <script>
+        document.querySelector('button').addEventListener('click', () => {
+            sessionStorage.setItem('sockety-username', document.querySelector('#inputEmail').value)
+        })
+    </script>
+</body>
+
+</html>

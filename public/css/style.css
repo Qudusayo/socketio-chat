@@ -139,8 +139,12 @@ form button {
     border-bottom-left-radius: 0;
 }
 
+#messages li pre{
+    font-family: Nunito;
+    font-weight: 600;
+}
+
 #messages li small {
-    font-size: 10px;
     text-align: left;
     margin: 0;
 }
@@ -149,6 +153,12 @@ form button {
     display: block;
     text-align: center;
     color: #999999;
+}
+
+#messages li small.time{
+    font-size: 10px;
+    display: block;
+    text-align: right;
 }
 
 #messages li.mine {

@@ -4,15 +4,17 @@ $(function () {
         if (!($('#m').val() === "")) {
             chat.emit('chat message', sessionStorage.getItem('sockety-username'), $('#m').val());
             $('#m').val('');
+            
         }
         return false;
     });
     chat.on('chat message', function (user, msg) {
         // $('#messages').append($('<li>').text(msg));
+        
         if (user == sessionStorage.getItem('sockety-username')) {
-            document.querySelector('#messages').innerHTML += `<li class="mine"><small>Me</small>${msg}</li>`;
+            document.querySelector('#messages').innerHTML += `<li class="mine"><small>Me</small><pre>${msg}</pre><small class="time">${Date().split(" ")[4].split(":").slice(0,2).join(':')}</small></li>`;
         } else {
-            document.querySelector('#messages').innerHTML += `<li><small>${user}</small>${msg}</li>`;
+            document.querySelector('#messages').innerHTML += `<li><small>${user}</small><pre>${msg}</pre><small class="time">${Date().split(" ")[4].split(":").slice(0,2).join(':')}</small</li>`;
         }
         window.scrollTo(0, document.body.scrollHeight);
     });

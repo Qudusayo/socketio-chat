@@ -2,19 +2,33 @@
 <html lang="en">
 
 <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="description" content="">
-    <meta name="author" content="">
-    <link rel="icon" href="assets/logo.png">
-
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Chatting in Incognito witout saving chat History, Made for fun">
+    <meta name="Incognito-Chat" content="Chatting in Incognito witout saving chat History, Made for fun" />
+    <meta name="application-name" content="Incognito-Chat">
+    <meta name="author" content="Qudusayo">
+    <meta name="keywords"
+        content="incognito-chat socket.io-chat Socket.io socket socket-chat Qudusayo javascript-chat javascript-chat-socketio socketio-javascript-chat">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="theme-color" content="#f8f8f8">
     <title>INCOGNITO CHAT</title>
-
     <!-- Bootstrap core CSS -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
-
     <!-- Custom styles for this template -->
     <link href="css/signin.css" rel="stylesheet">
+    <link rel="icon" href="assets/logo.png">
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-162659499-3"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        gtag('config', 'UA-162659499-3');
+    </script>
+
 </head>
 
 <body class="text-center">
@@ -31,7 +45,8 @@
     <form class="form-signin" method="POST" action="/">
         <img class="mb-6" src="assets/logo.png" style="transform: rotateY(180deg);" alt="" width="160" height="160">
         <label for="Username" class="sr-only">Username</label>
-        <input name="username" style="margin-top: 40px" type="text" id="inputEmail" class="form-control mb-2" placeholder="Username" required autofocus>
+        <input name="username" style="margin-top: 40px" type="text" id="inputEmail" class="form-control mb-2"
+            placeholder="Username" required autofocus>
         <button class="btn btn-lg btn-primary btn-block" type="submit">Join</button>
         <br>
         <p class="mt-5 mb-3 text-muted">&copy; Made By Qudusayo-2020</p>

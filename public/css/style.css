@@ -142,6 +142,11 @@ form button {
 #messages li pre{
     font-family: Nunito;
     font-weight: 600;
+    word-wrap: break-word;
+    word-break: break-all;
+    line-break: loose;
+    height: auto;
+    white-space: pre-wrap;
 }
 
 #messages li small {

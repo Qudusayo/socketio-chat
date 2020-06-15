@@ -32,6 +32,8 @@
 </head>
 
 <body class="text-center">
+    <div id="fb-root"></div>
+<script async defer crossorigin="anonymous" src="https://connect.facebook.net/en_GB/sdk.js#xfbml=1&version=v7.0&appId=524686674921055&autoLogAppEvents=1" nonce="6oVvYWER"></script>
     <nav class="navbar navbar-expand navbar-light bg-light" style="width: 100%;">
         <a class="navbar-brand" href="#" id="header"><img class="mb-6" src="assets/logo.png"
                 style="transform: rotateY(180deg);" alt="" width="30" height="30"></a>
@@ -51,7 +53,7 @@
         <br>
         <p class="mt-5 mb-3 text-muted">&copy; Made By Qudusayo-2020</p>
     </form>
-
+    <div class="fb-like" data-href="https://developers.facebook.com/docs/plugins/" data-width="50" data-layout="button_count" data-action="like" data-size="large" data-share="true"></div>
     <script>
         document.querySelector('button').addEventListener('click', () => {
             sessionStorage.setItem('sockety-username', document.querySelector('#inputEmail').value)

@@ -4,8 +4,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Chatting in Incognito witout saving chat History, Made for fun">
-  <meta name="Incognito-Chat" content="Chatting in Incognito witout saving chat History, Made for fun" />
+  <meta name="description" content="Chatting in Incognito witout saving chat History, Made for fun BY QUDUSAYO">
+  <meta name="Incognito-Chat" content="Chatting in Incognito witout saving chat History, Made for fun BY QUDUSAYO" />
   <meta name="application-name" content="Incognito-Chat">
   <meta name="author" content="Qudusayo">
   <meta name="keywords"
@@ -15,23 +15,24 @@
   <meta name="theme-color" content="#012">
   <link rel="apple-touch-icon" href="assets/logo.png" />
   <link rel="icon" href="assets/logo.png">
-  <title>Socket.IO chat</title>
+  <title>INCOGNITO CHAT | BY QUDUSAYO</title>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.0-2/css/all.min.css">
+  <link rel="stylesheet" href="fonts/font-awesome-4.7.0/css/font-awesome.min.css">
   <link rel="stylesheet" href="css/style.css">
   <!-- Global site tag (gtag.js) - Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=UA-162659499-3"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-162659499-3"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
 
-  gtag('config', 'UA-162659499-3');
-</script>
+    gtag('config', 'UA-162659499-3');
+  </script>
 
 </head>
 
 <body>
-  <nav>
+  <nav class="fixed">
     <ul>
       <li>
         <input type="checkbox" id="checkbox" class="checkbox">
@@ -46,9 +47,11 @@
       </li>
     </ul>
   </nav>
+  <img id="logo" src="assets/logo.png">
   <ul id="messages"></ul>
   <form action="">
-    <textarea id="m" autofocus /></textarea>
+    <div class="filebutton"><i class="fa fa-image"></i><input type="file" id="imagefile" accept="image/*"></div>
+    <textarea id="m" autofocus data-emojiable=”true” data-emoji-input=”unicode /></textarea>
     <button><i class="fa fa-paper-plane" aria-hidden="true"></i></button>
   </form>
   <script src="https://cdn.socket.io/socket.io-1.2.0.js"></script>

@@ -13,16 +13,27 @@ body {
     font: 13px Helvetica, Arial;
     font-family: Nunito;
     background-color: #c4c4c4;
-    transition: background  .3s linear;
+    transition: background .3s linear;
 }
 
-nav {
+img#logo {
+    top: 50%;
+    left: 50%;
+    width: 40%;
+    opacity: .3;
+    position: fixed;
+    transform: translate(-50%, -50%);
+    z-index: -1;
+}
+
+nav.fixed {
     position: fixed;
     width: 95%;
     padding: 0 0 0 20px;
+    margin-top: -2%;
 }
 
-nav ul {
+nav.fixed ul {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -31,7 +42,7 @@ nav ul {
     color: #888888;
 }
 
-nav ul li .label {
+nav.fixed ul li .label {
     background-color: #555555;
     display: flex;
     align-items: center;
@@ -44,12 +55,12 @@ nav ul li .label {
     transform: scale(0.7);
 }
 
-nav ul li .checkbox {
+nav.fixed ul li .checkbox {
     opacity: 0;
     position: absolute;
 }
 
-nav ul li .ball {
+nav.fixed ul li .ball {
     top: 3.5px;
     border-radius: 100%;
     width: 22px;
@@ -59,15 +70,15 @@ nav ul li .ball {
     transition: transform .2s linear;
 }
 
-nav ul li .checkbox:checked+.label .ball {
+nav.fixed ul li .checkbox:checked+.label .ball {
     transform: translateX(18px);
 }
 
-nav ul li .fa-moon {
+nav.fixed ul li .fa-moon {
     color: #f1c40f;
 }
 
-nav ul li .fa-sun {
+nav.fixed ul li .fa-sun {
     color: #f39c12;
 }
 
@@ -76,7 +87,7 @@ form {
     padding: 3px;
     display: flex;
     justify-content: center;
-    align-items: center;
+    align-items: flex-end;
     position: fixed;
     bottom: 0;
     width: 100%;
@@ -92,6 +103,7 @@ form textarea {
     height: 35px;
     max-height: 80px;
     margin-right: .5%;
+    margin-left: 1%;
     font-size: larger;
     background-color: #e8e8e8;
     font-family: Nunito;
@@ -103,22 +115,30 @@ form textarea::-webkit-scrollbar {
     background-color: transparent;
 }
 
-form button {
+form button,
+form .filebutton {
     width: 10%;
     text-transform: uppercase;
+    cursor: pointer;
     font-weight: bold;
     outline: none;
     border: none;
     text-align: center;
     border: none;
     padding: 10px;
-    background-color: #f40;
+    background-color: #012;
     color: #ffffff;
     border-radius: 20px;
     height: 80%;
     min-width: 40px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, .3), -2px 0 4px rgba(0, 0, 0, .3);
+}
 
+form .filebutton {
+    height: 80%;
+    width: 40px;
+    min-width: 40px;
+    box-shadow: 0 2px 2px rgba(0, 0, 0, .2), -2px 0 2px rgba(0, 0, 0, .2);
 }
 
 #messages {
@@ -139,7 +159,7 @@ form button {
     border-bottom-left-radius: 0;
 }
 
-#messages li pre{
+#messages li pre {
     font-family: Nunito;
     font-weight: 600;
     word-wrap: break-word;
@@ -154,13 +174,20 @@ form button {
     margin: 0;
 }
 
-#messages small {
+#messages small.mine {
     display: block;
     text-align: center;
     color: #999999;
+    background-color: #234;
+    opacity: .6;
+    width: fit-content;
+    margin: 2% auto 4%;
+    padding: 5px 10px;
+    border-radius: 50px;
+
 }
 
-#messages li small.time{
+#messages li small.time {
     font-size: 10px;
     display: block;
     text-align: right;
@@ -177,21 +204,52 @@ form button {
     margin-bottom: 60px
 }
 
-.dark{
+#messages li p img {
+    width: 100%;
+    height: 30%;
+    max-height: fit-content;
+    max-width: initial;
+}
+
+.dark {
     background-color: #012;
 }
 
-.dark  #messages li {
+.dark #messages li {
     background-color: #234;
     color: #aaaaaa;
 }
 
-.dark form textarea{
+.dark form textarea {
     background-color: #234;
     color: #aaaaaa;
     border: none;
 }
 
-.dark form button{
+.dark form button,
+.dark form .filebutton {
     background-color: #234;
+}
+
+input#imagefile {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 40px;
+    height: 80%;
+    opacity: 0;
+    margin: 0;
+}
+
+.dark .userList #menu{
+    background-color: #234;
+    color: #999999;
+}
+
+.dark .userList #menuToggle  h3{
+    color: #ededed;
+}
+
+.dark .userList #menuToggle input:checked~span{
+    background: #ededed;
 }
